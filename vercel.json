@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "receiver.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "receiver.py"
+      }
+    ]
+  }
