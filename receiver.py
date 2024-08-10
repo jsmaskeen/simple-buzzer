@@ -57,6 +57,14 @@ def clear():
     logs=[]
     return jsonify(success=True)
 
+
+@app.route('/clearconn')
+@cross_origin()
+def clearconn():
+    global connected
+    connected=[]
+    return jsonify(success=True)
+
 @app.route("/logs")
 @cross_origin()
 def log():
